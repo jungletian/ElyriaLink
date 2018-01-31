@@ -1,0 +1,18 @@
+apply plugin: 'java'
+
+dependencies {
+  compile project(':elyrialink-annotation')
+  compile deps.autoservice
+  compile deps.autocommon
+  compile deps.javapoet
+  compile deps.commonsLang
+
+  testCompile deps.junit
+  testCompile deps.truth
+  testCompile deps.robolectric
+  testCompile deps.compiletesting
+  testCompile files(org.gradle.internal.jvm.Jvm.current().getToolsJar())
+}
+
+sourceCompatibility = "1.7"
+targetCompatibility = "1.7"
