@@ -8,9 +8,6 @@ import java.lang.annotation.Target;
 /**
  * @author jungletian (tjsummery@gmail.com)
  */
-@Target(ElementType.TYPE) @Retention(RetentionPolicy.CLASS) public @interface ElyriaLink {
-  // 注解里的内容
-  String[] value();
 
-  boolean userRequired() default false;
+@Target({ ElementType.FIELD }) @Retention(RetentionPolicy.SOURCE) public @interface Json {
 }
